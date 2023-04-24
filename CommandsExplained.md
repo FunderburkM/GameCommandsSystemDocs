@@ -57,7 +57,7 @@ Utility text to provide insights on this command, very useful when needing to pr
 Array of Name variables that we recognize as a compatible string to execute this command. This can be overridden in the function `CheckForCompatibleCommand`.  
 
 `Command Tags`  
-Gameplay tag container that allows to provide meta information on what this command is, what category it belongs to, among other things. It's really important as you can then control command execution through our [Developer Setting's globally forbidden tags](/README.md#developer-settings) and in our [Execute Commands](/GeneralOverview.md#running-commands) for specifying specific tags, such as say that you want your dynamic chat system to only be able to run commands that you've tagged as `Chat Commands` when inputting user-based text.  
+Gameplay tag container that allows to provide meta information on what this command is, what category it belongs to, among other things. It's really important as you can then control command execution through our [Developer Setting's globally forbidden tags](/README.md#developer-settings) and in our [Execute Commands](/GeneralOverview.md#running-commands) for specifying specific tags, such as say that you want your dynamic chat system to only be able to run commands that you've tagged as `Chat Commands` when inputting user-based text. You can find more information [here](/GeneralOverview.md#command-tags).  
 
 #### Execution
 

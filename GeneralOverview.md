@@ -1,6 +1,16 @@
 # General Overview
 
 [Back to Readme](/README.md)  
+[Commands Explained](/CommandsExplained.md)  
+
+## Table of Contents
+
+* [Getting The subsystem](#getting-the-subsystem)  
+* [Registering Commands](#how-to-register-your-commands)  
+* [Querying Commands](#querying-commands)  
+* [Running Commands](#running-commands)  
+* [Gameplay Tag Interactions](#command-tags)  
+* [Console Command Support](#console-command-line)  
 
 Our Command System is powered by an `UEngineSubsystem`, which is present throughout the vast majority of the engine's lifetime, all from the point the main Engine Class `UEngine` initiates till it shuts down. This object keeps and manages all of our command objects.  
 
@@ -90,6 +100,16 @@ FGCsCommandExecuteResult Exec = UGCSCommandSubsystem::Get()->ExecuteGameCommand(
 ```
 
 Command Execution with `Optional Context Object` is important depending on the command, for more information, check [this page](/CommandsExplained.md).  
+
+## Command Tags
+
+Commands have a Gameplay Tag Container to help categorize and identify _types_ of commands. This gameplay tag is used in multiple ways:  
+
+* As overviewed in the images above, you also Query Commands By Tag, Stop Commands by Tag.  
+* When Executing commands, you can also add gameplay tag execution rules, so running `/invite PlayerName` input as a string can only be ran if the found command has a Chat gameplay tag.  
+* Project Setting Forbidden Tags: [Overviewed here](/README.md#developer-settings) can provide project-wide tags to block from being able to execute. This is a simple way to control which commands can be disabled.  
+* Subsystem Blocked Tags: In addition to Project Forbidden tags, you can add and remove blocked tags as needed. Say that party invite chat commands are only available in specific levels, you can use these functions to control that.  
+![BlockedTags](/Resources/BlueprintGraph/DynamicallyBlockedTags.JPG)  
 
 ## Console Command Line
 
