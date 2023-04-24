@@ -9,6 +9,7 @@
 * [Overview](#overview)  
 * [Default Panel](#defaults)  
 * [Execute Functions](#execute-functionality)  
+* [Optional Context Object](#optional-context-object)
 * [Overridable Functions](#overridable-functions)  
 * [Sync and Async Commands](#sync-and-async)
 
@@ -71,6 +72,16 @@ Controls where this command can runtime generally speaking. Is it an Editor-time
 In the example above of `Print Level` command, we simply run the operation of Getting the level name and printing it to string, then specifying our Execute Result with a prompt enum, string, and output message.  
 
 ![Execute](/Resources/Commands/CommandExecuteSync.JPG)  
+
+## Optional Context Object
+
+As you may have noticed, both our Execute Game Command Functions for both C++ and BP as well as our Internal Execute functions inside the command have the concept of an `optional context object`. What's up with that?  
+
+This concept may be more familiar with C++ users, but unreal often uses the concept of a context object to be able to reach out to other systems, commonly a valid World. For context in Blueprint, This is usually hidden away from Blueprints who have a valid way to reach their world, like Actors. If you've ever done a Blueprint Function library and placed a Line Trace function, you may have noticed that `World Context Object` variable pin appear!  
+
+While it is true that we do use this Optional Context to retrieve our world, the optional context object can also be a way to tell the system which specific object you want to run the command on. Suppose you have a chat command system, where `/invite PlayerName` is meant to talk to your project's online subsystem provider and run party functionality. Depending on how your project is structured, say that you handle all the party functionality inside an actor component, so you need a point of reference to get the component from. When doing `ExecuteGameCommand`, you could input your owning player controller (say that you run this from the chat widget). Now, inside the Execute function, your `Optional Context Object` is the player controller that you want to run all your actions on!  
+
+This is an additional method to ensure verification and execution safety. You wouldn't want just _any thing_ being able to run `/invite PlayerName` just because they inputed that string.  
 
 ## Overridable Functions
 

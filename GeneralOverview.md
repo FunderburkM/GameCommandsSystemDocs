@@ -51,6 +51,8 @@ You can totally run your commands from code!
 
 ![Running In BP Graph](/Resources/BlueprintGraph/ExecutingAndStoppingCommands.JPG)  
 
+Optional Must Have Tags allow you to filter through commands. Say that you have `GameCommands.Chat` commands. By Adding that tag this gameplay tag container, you ensure that any string input that matches a command must also be tagged as a `GameCommands.Chat` in order for it to run! [More Information here](/CommandsExplained.md#admin).  
+
 The `Execute Game Command` functions are static and can be ran from anywhere! You also get plenty of options for stopping game commands, though keep note that the only game commands that can be stopped in practical terms are asynchronous commands.  
 
 In C++, it'd be a similar case:  
@@ -94,6 +96,8 @@ Command Execution with `Optional Context Object` is important depending on the c
 You can also run commands from the console command line.  
 
 ![Command Args](/Resources/ConsoleCommand/CommandListOverview.JPG)  
+
+> Correction: GCS.Run's description is incorrect, and can execute any type of registered command from the console, not just synchronous commands. You can see this in action in the image below.  
 
 Executing a command:  
 
