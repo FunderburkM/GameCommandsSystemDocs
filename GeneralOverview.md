@@ -49,6 +49,12 @@ You can also register them on demand manually, say that you want to load all you
 
 You can also register types in editor as they get created/compiled they will be automatically registered, but please keep in mind that your standalone/packaged game will only auto add commands from the asset manager rules.  
 
+This behavior is slightly different between different engine versions. For best results, use the 5.1+ version plugin on a 5.1+ project.  
+
+In 4.27, you'll have to register the Accepted Directories in asset manager rules yourself in order for even the demo commands to be recognized as the engine doesn't support adding directories to asset manager rules from code.  
+
+Also in 4.27, recompiling the command blueprints do not re-add it automatically to the subsystem, in which case you can use the Toggle To Add and/or Save the command asset and it should re-register it properly. This behavior may also be sometimes found in the 5.0 version of the plugin.  
+
 ## Querying Commands
 
 We also count with several querying functions for finding the specific commands should you need to access their read data.  
