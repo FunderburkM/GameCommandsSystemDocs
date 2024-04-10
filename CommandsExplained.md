@@ -99,6 +99,8 @@ Let's take a look then at `Demo_PrintWithDelay`, a simple command that prints th
 
 ![Print Delay](/Resources/Commands/PrintDelaySample.JPG)  
 
+You can read more information about the Output Log system [here](/CommandOutputLog.md).  
+
 Here, the Execute Function is void, which means that it can continue running in the following ticks without halting the rest of the system's executions.  
 
 You can then see the differences between each of them here, where we run

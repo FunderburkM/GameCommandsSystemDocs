@@ -119,6 +119,8 @@ Commands have a Gameplay Tag Container to help categorize and identify _types_ o
 
 ## Console Command Line
 
+> For information on the Custom Widget Console command System, check [here](/ConsoleWidget.md).  
+
 You can also run commands from the console command line.  
 
 ![Command Args](/Resources/ConsoleCommand/CommandListOverview.JPG)  
