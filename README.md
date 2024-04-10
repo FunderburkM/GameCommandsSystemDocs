@@ -12,4 +12,8 @@ Advanced Game Commands is an editor-game plugin which empowers users to drive th
 
 [1.0 Docs](https://github.com/FunderburkM/GameCommandsSystemDocs/tree/V1.0-Docs)  
 
+[1.1 Docs](https://github.com/FunderburkM/GameCommandsSystemDocs/tree/V1.1-Docs)  
+
 ![Thumbnail](/Resources/MainImage.png)  
+
+![Console Widget](/Resources/ConsoleOverview.jpg)  
